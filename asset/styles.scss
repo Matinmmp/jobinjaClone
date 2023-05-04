@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+  .container {
+  width: 100%;
+  }
+}
+
+footer {
+  background-color: rgb(77, 77, 77);
+  text-align: right;
+  padding: 2rem 0;
+  color: white;
+  .accordion--footer {
+    display: none;
+  }
+  li {
+    list-style: none;
+    padding: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    .content--footer {
+      display: none;
+    }
+    .media-icons {
+      justify-content: center;
+    }
+    .accordion--footer {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      text-align: center;
+      padding: 2rem 0;
+
+      details {
+        padding: 0.5rem 0.2rem;
+        background-color: #6c6c6c;
+        outline: none;
+        summary {
+          outline: none;
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .content--footer {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 1rem;
+    }
+    .karfarma {
+      // grid-area: a;
+      // background-color: bisque;
+    }
+    .karjoyan {
+      // grid-area: b;
+    }
+    .jobinja {
+      // grid-area: c;
+    }
+    .social {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      text-align: center;
+      .media-icons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.content--footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+}
+
+.item-footer {
+  
+  .first--li--footer {
+    font-weight: bold;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #5b5b5a;
+    color: gray;
+  }
+}
+
+.media-icons {
+  display: flex;
+  justify-content: end;
+  column-gap: 0.2rem;
+
+}
